@@ -13,9 +13,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install PHP 5.6
 curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6
 
-user=mourawaldson
 ini=/usr/local/php5/php.d/99-liip-developer.ini
-github=https://github.com/$user
+github=https://github.com/$SUDO_USER
 
 # Backup ini
 sudo cp $ini $ini-bkp
@@ -38,7 +37,7 @@ done
 ###############################################################################
 
 # Define and create Sites dirw
-SITESDIR=/Users/$user/Sites
+SITESDIR=/$HOME/Sites
 mkdir $SITESDIR
 
 # Create info.php
@@ -52,10 +51,10 @@ USERCONF="<Directory \"$SITESDIR\">
     Options Indexes MultiViews FollowSymLinks
     Require all granted
 </Directory>"
-sudo echo "$USERCONF" > /etc/apache2/users/$user.conf
+sudo echo "$USERCONF" > /etc/apache2/$HOME.conf
 
 # Make sure about user conf permission
-sudo chmod 644 /etc/apache2/users/$user.conf
+sudo chmod 644 /etc/apache2/$HOME.conf
 
 # Change Apache Web User
 #sudo sed -i '' 's/User _www/User admin #User _www/g' /etc/apache2/httpd.conf
@@ -102,7 +101,7 @@ BINFOLDER=/usr/local/bin
 sudo mkdir $BINFOLDER
 
 # Define and create to-install dir
-TOINSTALLDIR=/Users/$user/to-install
+TOINSTALLDIR=/$HOME/to-install
 mkdir $TOINSTALLDIR
 
 # Atom
