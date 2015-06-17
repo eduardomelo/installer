@@ -46,7 +46,7 @@ phpinfo();"
 echo "$PHPINFO" > $SITESDIR/info.php
 
 # Create user conf
-USERCONF="<Directory $SITESDIR\">
+USERCONF="<Directory \"$SITESDIR\">
     AllowOverride All
     Options Indexes MultiViews FollowSymLinks
     Require all granted
