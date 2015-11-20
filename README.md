@@ -3,19 +3,19 @@ Install apps and configs
 ## Instructions
 ### To install execute:
 ```bash
-cd; curl -sL https://github.com/mourawaldson/installer/tarball/master | tar -xzv --strip-components 1 --exclude=README.md --exclude=LICENSE && sudo bash installer
+cd; curl -sL https://github.com/eduardomelo/installer/tarball/master | tar -xzv --strip-components 1 --exclude=README.md --exclude=LICENSE && sudo bash installer
 ```
 ### After install
 1. [Generate SSH key](https://help.github.com/articles/generating-ssh-keys)
 2. Create Volumes for Seagate Central - Go to Finder, press ⌘ + K, paste ```smb://seagate-central``` then press enter
-3. Backup current library and copy iTunes library with my content ``` mv /Users/mourawaldson/Music/iTunes /Users/mourawaldson/Music/iTunes-bkp && cp -R /Volumes/Public/iTunes /Users/mourawaldson/Music/iTunes```
-4. Copy Dropbox backup ``` cp -R /Volumes/Public/Dropbox /Users/mourawaldson/Dropbox ```
-5. Install applications - /Users/mourawaldson/to-install (delete folder after install)
+3. Backup current library and copy iTunes library with my content ``` mv /Users/eduardomelo/Music/iTunes /Users/eduardomelo/Music/iTunes-bkp && cp -R /Volumes/Public/iTunes /Users/eduardomelo/Music/iTunes```
+4. Copy Dropbox backup ``` cp -R /Volumes/Public/Dropbox /Users/eduardomelo/Dropbox ```
+5. Install applications - /Users/eduardomelo/to-install (delete folder after install)
 6. [Install Atom](https://atom.io/download/mac)
 7. Install HP ``` hdiutil attach /Volumes/waldson/Programs/HP-Inkjet-SW-OSX-Mavericks_v12.34.44.dmg ```
 8. Install Office (DVD)
 9. Install applications from App Store
-10. Install workflows ``` curl -sL https://github.com/mourawaldson/workflows/tarball/master | tar -xzv --strip-components 1 && open New\ Text\ File.workflow ```
+10. Install workflows ``` curl -sL https://github.com/eduardomelo/workflows/tarball/master | tar -xzv --strip-components 1 && open New\ Text\ File.workflow ```
 11. Sequel Favorites - ``` cp ~/Dropbox/Softwares/Sequel\ Pro/Data/Favorites.plist ~/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist ```
 12. Install xcode command line ``` xcode-select --install ```
 
